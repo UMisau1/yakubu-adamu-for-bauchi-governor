@@ -1,0 +1,675 @@
+/* ==========================================
+   YAKUBU CAMPAIGN WEBSITE
+   VOLUNTEER.CSS
+   VERSION 1.0
+========================================== */
+
+/* ==========================================
+   VOLUNTEER HERO
+========================================== */
+
+.volunteer-hero{
+
+    background:linear-gradient(rgba(0,0,0,.6),
+    rgba(0,0,0,.6)),
+    url("../images/volunteer-bg.jpg") center/cover;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+}
+
+.volunteer-hero h1{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+.volunteer-hero p{
+
+    font-size:20px;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.volunteer-profile{
+
+    padding:60px 20px;
+
+    background:#f8f9fa;
+
+}
+
+.profile-card{
+
+    max-width:380px;
+
+    margin:auto;
+
+    background:#fff;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.profile-card img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+
+}
+
+.profile-card h2{
+
+    margin-bottom:10px;
+
+}
+
+.profile-card span{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#16a34a;
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+}
+/* ==========================================
+   VOLUNTEER STATISTICS
+========================================== */
+
+.volunteer-stats{
+
+    padding:60px 20px;
+
+    background:#ffffff;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.stat-card i{
+
+    font-size:45px;
+
+    color:#16a34a;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h3{
+
+    margin-bottom:10px;
+
+    color:#555;
+
+}
+
+.stat-card h2{
+
+    font-size:36px;
+
+    color:#111;
+
+}
+
+/* ==========================================
+   DASHBOARD GRID
+========================================== */
+
+.dashboard{
+
+    padding:60px 20px;
+
+    background:#f5f7fb;
+
+}
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.dashboard-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-10px);
+
+    background:#16a34a;
+
+    color:#fff;
+
+}
+
+.dashboard-card i{
+
+    font-size:50px;
+
+    color:#16a34a;
+
+    margin-bottom:20px;
+
+    transition:.4s;
+
+}
+
+.dashboard-card:hover i{
+
+    color:#fff;
+
+}
+
+.dashboard-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.dashboard-card p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+/* ==========================================
+   TODAY'S ASSIGNMENT
+========================================== */
+
+.today-task{
+
+    padding:70px 20px;
+
+    background:#ffffff;
+
+}
+
+.today-task h2{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    font-size:34px;
+
+    color:#111827;
+
+}
+
+.task-box{
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:#f8fafc;
+
+    padding:35px;
+
+    border-left:6px solid #16a34a;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.task-box ul{
+
+    list-style:none;
+
+}
+
+.task-box li{
+
+    padding:15px 0;
+
+    font-size:17px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.task-box li:last-child{
+
+    border-bottom:none;
+
+}
+
+.task-box i{
+
+    color:#16a34a;
+
+    margin-right:12px;
+
+}
+
+/* ==========================================
+   EVENTS
+========================================== */
+
+.volunteer-events{
+
+    padding:70px 20px;
+
+    background:#f5f7fb;
+
+}
+
+.volunteer-events h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.event-card{
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.event-card h3{
+
+    margin-bottom:15px;
+
+    color:#16a34a;
+
+}
+
+.event-card p{
+
+    margin-bottom:10px;
+
+}
+
+.event-card i{
+
+    margin-right:8px;
+
+    color:#2563eb;
+
+}
+
+/* ==========================================
+   ANNOUNCEMENTS
+========================================== */
+
+.announcements{
+
+    padding:70px 20px;
+
+    background:#ffffff;
+
+}
+
+.announcements h2{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.announcement-list{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.announcement-item{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    background:#f8fafc;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.06);
+
+}
+
+.announcement-item i{
+
+    font-size:28px;
+
+    color:#16a34a;
+
+}
+/* ==========================================
+   CAMPAIGN PROGRESS
+========================================== */
+
+.campaign-progress{
+
+    padding:70px 20px;
+
+    background:#f5f7fb;
+
+}
+
+.campaign-progress h2{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.progress-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:30px;
+
+    background:#e5e7eb;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:600;
+
+    border-radius:50px;
+
+    transition:width 1.5s ease;
+
+}
+
+/* ==========================================
+   WHATSAPP FLOAT
+========================================== */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:60px;
+
+    height:60px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    text-decoration:none;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ==========================================
+   BACK TO TOP
+========================================== */
+
+#backToTop{
+
+    position:fixed;
+
+    bottom:100px;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+#backToTop:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .volunteer-hero h1{
+
+        font-size:34px;
+
+    }
+
+    .volunteer-hero p{
+
+        font-size:17px;
+
+    }
+
+    .stats-grid,
+    .dashboard-grid,
+    .events-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .announcement-item{
+
+        flex-direction:column;
+
+    }
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.stat-card,
+.dashboard-card,
+.event-card,
+.profile-card,
+.task-box,
+.announcement-item{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

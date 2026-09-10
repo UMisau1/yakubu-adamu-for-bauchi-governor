@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gallery | Yakubu Campaign 2027</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================================
+           GALLERY PAGE - ISOLATED CSS
+        ========================================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        body.gallery-page {
+
+            font-family: "Montserrat", sans-serif;
+
+            background: #f5f7f5;
+
+            color: #1f2922;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .gallery-navbar {
+
+            background: #ffffff;
+
+            border-bottom: 1px solid #e7ece8;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+        }
+
+
+        .gallery-nav-container {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            min-height: 80px;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .gallery-logo {
+
+            text-decoration: none;
+
+            color: #242b26;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+        }
+
+
+        .gallery-logo span {
+
+            color: #087443;
+
+        }
+
+
+        .gallery-nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+        }
+
+
+        .gallery-nav-links a {
+
+            text-decoration: none;
+
+            color: #3d443f;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .gallery-nav-links a:hover,
+        .gallery-active-link {
+
+            color: #087443 !important;
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .gallery-hero {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(8, 116, 67, 0.98),
+                    rgba(23, 77, 53, 0.98)
+                );
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 100px 25px;
+
+        }
+
+
+        .gallery-hero-container {
+
+            max-width: 900px;
+
+            margin: auto;
+
+        }
+
+
+        .gallery-tag {
+
+            display: inline-block;
+
+            color: #ffbd22;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .gallery-hero h1 {
+
+            font-size: 58px;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .gallery-hero h1 span {
+
+            color: #ffbd22;
+
+        }
+
+
+        .gallery-hero p {
+
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #dce9e1;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        .gallery-main {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 100px 25px;
+
+        }
+
+
+        .gallery-section {
+
+            margin-bottom: 100px;
+
+        }
+
+
+        .gallery-section-tag {
+
+            display: block;
+
+            color: #087443;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .gallery-section-title {
+
+            font-size: 42px;
+
+            color: #1f2922;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .gallery-section-text {
+
+            color: #69736c;
+
+            max-width: 750px;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================================
+           FILTER BUTTONS
+        ========================================= */
+
+        .gallery-filters {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 35px;
+
+        }
+
+
+        .gallery-filter {
+
+            border: 1px solid #dce5df;
+
+            background: #ffffff;
+
+            color: #405047;
+
+            padding: 11px 20px;
+
+            border-radius: 30px;
+
+            font-family: inherit;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+
+        .gallery-filter:hover,
+        .gallery-filter.active {
+
+            background: #087443;
+
+            color: #ffffff;
+
+            border-color: #087443;
+
+        }
+
+
+        /* =========================================
+           PHOTO GRID
+        ========================================= */
+
+        .gallery-photo-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+
+            margin-top: 40px;
+
+        }
+
+
+        .gallery-photo {
+
+            position: relative;
+
+            height: 290px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            background: #dcefe3;
+
+            transition: 0.3s;
+
+        }
+
+
+        .gallery-photo:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+
+        }
+
+
+        .gallery-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.5s;
+
+        }
+
+
+        .gallery-photo:hover img {
+
+            transform: scale(1.08);
+
+        }
+
+
+        .gallery-photo-overlay {
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            padding: 55px 25px 25px;
+
+            background:
+
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.85)
+                );
+
+            color: #ffffff;
+
+            opacity: 0;
+
+            transition: 0.3s;
+
+        }
+
+
+        .gallery-photo:hover
+        .gallery-photo-overlay {
+
+            opacity: 1;
+
+        }
+
+
+        .gallery-photo-overlay h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .gallery-photo-overlay span {
+
+            font-size: 12px;
+
+            color: #dce9e1;
+
+        }
+
+
+        /* =========================================
+           VIDEO GALLERY
+        ========================================= */
+
+        .gallery-video-section {
+
+            background: #ffffff;
+
+            border-radius: 25px;
+
+            padding: 60px;
+
+            border: 1px solid #e6ece8;
+
+        }
+
+
+        .gallery-video-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 40px;
+
+        }
+
+
+        .gallery-video-card {
+
+            border: 1px solid #e5ebe7;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background: #f8faf8;
+
+            transition: 0.3s;
+
+        }
+
+
+        .gallery-video-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+
+        }
+
+
+        .gallery-video-thumbnail {
+
+            height: 220px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #174d35;
+
+            cursor: pointer;
+
+        }
+
+
+        .gallery-video-thumbnail img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.4s;
+
+        }
+
+
+        .gallery-video-thumbnail:hover img {
+
+            transform: scale(1.07);
+
+        }
+
+
+        .gallery-video-thumbnail::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(0,0,0,0.25);
+
+        }
+
+
+        .gallery-play-button {
+
+            width: 70px;
+
+            height: 70px;
+
+            border-radius: 50%;
+
+            background: #ffbd22;
+
+            color: #1f2922;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 24px;
+
+            padding-left: 4px;
+
+            font-weight: 800;
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            z-index: 2;
+
+            transition: 0.3s;
+
+        }
+
+
+        .gallery-video-thumbnail:hover
+        .gallery-play-button {
+
+            transform: translate(-50%, -50%) scale(1.12);
+
+        }
+
+
+        .gallery-video-content {
+
+            padding: 25px;
+
+        }
+
+
+        .gallery-video-content h3 {
+
+            font-size: 18px;
+
+            line-height: 1.4;
+
+            margin-bottom: 10px;
+
+            color: #263028;
+
+        }
+
+
+        .gallery-video-content p {
+
+            color: #6c756e;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================================
+           PHOTO LIGHTBOX
+        ========================================= */
+
+        .gallery-lightbox {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0,0,0,0.92);
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+
+            z-index: 9999;
+
+        }
+
+
+        .gallery-lightbox.active {
+
+            display: flex;
+
+        }
+
+
+        .gallery-lightbox-content {
+
+            position: relative;
+
+            max-width: 1100px;
+
+            width: 100%;
+
+        }
+
+
+        .gallery-lightbox img {
+
+            width: 100%;
+
+            max-height: 82vh;
+
+            object-fit: contain;
+
+            display: block;
+
+            border-radius: 10px;
+
+        }
+
+
+        .gallery-lightbox-close {
+
+            position: absolute;
+
+            top: -50px;
+
+            right: 0;
+
+            border: none;
+
+            background: transparent;
+
+            color: #ffffff;
+
+            font-size: 38px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================================
+           VIDEO MODAL
+        ========================================= */
+
+        .gallery-video-modal {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0,0,0,0.93);
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 25px;
+
+            z-index: 10000;
+
+        }
+
+
+        .gallery-video-modal.active {
+
+            display: flex;
+
+        }
+
+
+        .gallery-video-modal-content {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 1050px;
+
+        }
+
+
+        .gallery-video-modal video {
+
+            width: 100%;
+
+            max-height: 82vh;
+
+            display: block;
+
+            background: #000000;
+
+            border-radius: 12px;
+
+        }
+
+
+        .gallery-video-close {
+
+            position: absolute;
+
+            top: -50px;
+
+            right: 0;
+
+            border: none;
+
+            background: transparent;
+
+            color: #ffffff;
+
+            font-size: 38px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .gallery-cta {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #174d35,
+                    #087443
+                );
+
+            padding: 75px 30px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            color: #ffffff;
+
+        }
+
+
+        .gallery-cta h2 {
+
+            font-size: 40px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .gallery-cta p {
+
+            color: #dce9e1;
+
+            max-width: 700px;
+
+            margin: auto;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .gallery-footer {
+
+            background: #102d20;
+
+            color: #b9c9bf;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            font-size: 13px;
+
+        }
+
+
+        .gallery-footer strong {
+
+            color: #ffffff;
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+
+            .gallery-photo-grid,
+            .gallery-video-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+        }
+
+
+        @media (max-width: 700px) {
+
+
+            .gallery-navbar {
+
+                position: relative;
+
+            }
+
+
+            .gallery-nav-container {
+
+                flex-direction: column;
+
+                padding: 20px;
+
+                gap: 15px;
+
+            }
+
+
+            .gallery-nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+
+            }
+
+
+            .gallery-hero {
+
+                padding: 75px 20px;
+
+            }
+
+
+            .gallery-hero h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .gallery-main {
+
+                padding: 75px 20px;
+
+            }
+
+
+            .gallery-section {
+
+                margin-bottom: 70px;
+
+            }
+
+
+            .gallery-section-title {
+
+                font-size: 32px;
+
+            }
+
+
+            .gallery-photo-grid,
+            .gallery-video-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .gallery-photo {
+
+                height: 270px;
+
+            }
+
+
+            .gallery-video-section {
+
+                padding: 35px 20px;
+
+            }
+
+
+            .gallery-cta {
+
+                padding: 55px 20px;
+
+            }
+
+
+            .gallery-cta h2 {
+
+                font-size: 30px;
+
+            }
+
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="gallery-page">
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <nav class="gallery-navbar">
+
+        <div class="gallery-nav-container">
+
+
+            <a
+                href="index.html"
+                class="gallery-logo"
+            >
+
+                YAKUBU <span>Campaign</span>
+
+            </a>
+
+
+            <div class="gallery-nav-links">
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="manifesto.html">
+                    Manifesto
+                </a>
+
+
+                <a href="events.html">
+                    Events
+                </a>
+
+
+                <a href="news.html">
+                    News
+                </a>
+
+
+                <a
+                    href="gallery.html"
+                    class="gallery-active-link"
+                >
+                    Gallery
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="gallery-hero">
+
+        <div class="gallery-hero-container">
+
+
+            <span class="gallery-tag">
+
+                Campaign Media
+
+            </span>
+
+
+            <h1>
+
+                Moments from the
+
+                <span>
+                    Movement
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Explore photos and videos from campaign
+                activities, community engagements, meetings
+                and events across Bauchi State.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main class="gallery-main">
+
+
+        <!-- =========================================
+             PHOTO GALLERY
+        ========================================= -->
+
+        <section class="gallery-section">
+
+
+            <span class="gallery-section-tag">
+
+                Photo Gallery
+
+            </span>
+
+
+            <h2 class="gallery-section-title">
+
+                Campaign Moments
+
+            </h2>
+
+
+            <p class="gallery-section-text">
+
+                A collection of memorable moments from
+                campaign activities and community engagements.
+
+            </p>
+
+
+
+            <!-- FILTER BUTTONS -->
+
+            <div class="gallery-filters">
+
+
+                <button
+                    class="gallery-filter active"
+                    data-filter="all"
+                >
+
+                    All
+
+                </button>
+
+
+                <button
+                    class="gallery-filter"
+                    data-filter="campaign"
+                >
+
+                    Campaign
+
+                </button>
+
+
+                <button
+                    class="gallery-filter"
+                    data-filter="community"
+                >
+
+                    Community
+
+                </button>
+
+
+                <button
+                    class="gallery-filter"
+                    data-filter="youth"
+                >
+
+                    Youth
+
+                </button>
+
+
+                <button
+                    class="gallery-filter"
+                    data-filter="events"
+                >
+
+                    Events
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 PHOTO GRID
+            ========================================= -->
+
+            <div class="gallery-photo-grid">
+
+
+                <!-- PHOTO 1 -->
+
+                <div
+                    class="gallery-photo"
+                    data-category="campaign"
+                >
+
+                    <img
+                        src="images/photo1.jpg"
+                        alt="Campaign Engagement"
+                    >
+
+
+                    <div class="gallery-photo-overlay">
+
+                        <h3>
+                            Campaign Engagement
+                        </h3>
+
+                        <span>
+                            Bauchi State
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PHOTO 2 -->
+
+                <div
+                    class="gallery-photo"
+                    data-category="community"
+                >
+
+                    <img
+                        src="images/photo2.jpg"
+                        alt="Community Meeting"
+                    >
+
+
+                    <div class="gallery-photo-overlay">
+
+                        <h3>
+                            Community Meeting
+                        </h3>
+
+                        <span>
+                            Community Engagement
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PHOTO 3 -->
+
+                <div
+                    class="gallery-photo"
+                    data-category="youth"
+                >
+
+                    <img
+                        src="images/photo3.jpg"
+                        alt="Youth Engagement"
+                    >
+
+
+                    <div class="gallery-photo-overlay">
+
+                        <h3>
+                            Youth Engagement
+                        </h3>
+
+                        <span>
+                            Future Leaders
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PHOTO 4 -->
+
+                <div
+                    class="gallery-photo"
+                    data-category="events"
+                >
+
+                    <img
+                        src="images/photo4.jpg"
+                        alt="Campaign Event"
+                    >
+
+
+                    <div class="gallery-photo-overlay">
+
+                        <h3>
+                            Campaign Event
+                        </h3>
+
+                        <span>
+                            Public Engagement
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PHOTO 5 -->
+
+                <div
+                    class="gallery-photo"
+                    data-category="campaign"
+                >
+
+                    <img
+                        src="images/photo5.jpg"
+                        alt="Campaign Movement"
+                    >
+
+
+                    <div class="gallery-photo-overlay">
+
+                        <h3>
+                            Campaign Movement
+                        </h3>
+
+                        <span>
+                            Together for Progress
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PHOTO 6 -->
+
+                <div
+                    class="gallery-photo"
+                    data-category="community"
+                >
+
+                    <img
+                        src="images/photo6.jpg"
+                        alt="Community Visit"
+                    >
+
+
+                    <div class="gallery-photo-overlay">
+
+                        <h3>
+                            Community Visit
+                        </h3>
+
+                        <span>
+                            Bauchi Communities
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             VIDEO GALLERY
+        ========================================= -->
+
+        <section class="gallery-section">
+
+
+            <div class="gallery-video-section">
+
+
+                <span class="gallery-section-tag">
+
+                    Video Gallery
+
+                </span>
+
+
+                <h2 class="gallery-section-title">
+
+                    Watch the Movement
+
+                </h2>
+
+
+                <p class="gallery-section-text">
+
+                    Watch campaign activities, speeches,
+                    interviews and community engagements.
+
+                </p>
+
+
+
+                <div class="gallery-video-grid">
+
+
+                    <!-- VIDEO 1 -->
+
+                    <div class="gallery-video-card">
+
+
+                        <div
+                            class="gallery-video-thumbnail"
+                            data-video="videos/video1.mp4"
+                        >
+
+                            <img
+                                src="images/video-thumb1.jpg"
+                                alt="Campaign Message"
+                            >
+
+
+                            <div class="gallery-play-button">
+
+                                ▶
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="gallery-video-content">
+
+
+                            <h3>
+
+                                Campaign Message
+
+                            </h3>
+
+
+                            <p>
+
+                                A message to supporters and
+                                citizens of Bauchi State.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- VIDEO 2 -->
+
+                    <div class="gallery-video-card">
+
+
+                        <div
+                            class="gallery-video-thumbnail"
+                            data-video="videos/video2.mp4"
+                        >
+
+                            <img
+                                src="images/video-thumb2.jpg"
+                                alt="Community Engagement"
+                            >
+
+
+                            <div class="gallery-play-button">
+
+                                ▶
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="gallery-video-content">
+
+
+                            <h3>
+
+                                Community Engagement
+
+                            </h3>
+
+
+                            <p>
+
+                                Highlights from a community
+                                engagement programme.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- VIDEO 3 -->
+
+                    <div class="gallery-video-card">
+
+
+                        <div
+                            class="gallery-video-thumbnail"
+                            data-video="videos/video3.mp4"
+                        >
+
+                            <img
+                                src="images/video-thumb3.jpg"
+                                alt="Youth Forum"
+                            >
+
+
+                            <div class="gallery-play-button">
+
+                                ▶
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="gallery-video-content">
+
+
+                            <h3>
+
+                                Youth Forum
+
+                            </h3>
+
+
+                            <p>
+
+                                Discussion with young people
+                                and campaign supporters.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             CTA
+        ========================================= -->
+
+        <section class="gallery-cta">
+
+
+            <h2>
+
+                More Moments Coming Soon
+
+            </h2>
+
+
+            <p>
+
+                As the campaign continues, more photos and
+                videos from activities across Bauchi State
+                will be added here.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         PHOTO LIGHTBOX
+    ========================================= -->
+
+    <div
+        class="gallery-lightbox"
+        id="galleryLightbox"
+    >
+
+
+        <div class="gallery-lightbox-content">
+
+
+            <button
+                class="gallery-lightbox-close"
+                id="galleryLightboxClose"
+                type="button"
+            >
+
+                ×
+
+            </button>
+
+
+            <img
+                id="galleryLightboxImage"
+                src=""
+                alt="Gallery Image"
+            >
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         VIDEO MODAL
+    ========================================= -->
+
+    <div
+        class="gallery-video-modal"
+        id="galleryVideoModal"
+    >
+
+
+        <div class="gallery-video-modal-content">
+
+
+            <button
+                class="gallery-video-close"
+                id="galleryVideoClose"
+                type="button"
+            >
+
+                ×
+
+            </button>
+
+
+            <video
+                id="galleryVideoPlayer"
+                controls
+            >
+
+                Your browser does not support video.
+
+            </video>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="gallery-footer">
+
+
+        <p>
+
+            © 2026
+
+            <strong>
+                Yakubu Campaign
+            </strong>.
+
+            All Rights Reserved.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+
+        /* =========================================
+           PHOTO FILTER
+        ========================================= */
+
+        const galleryFilters =
+            document.querySelectorAll(
+                ".gallery-filter"
+            );
+
+
+        const galleryPhotos =
+            document.querySelectorAll(
+                ".gallery-photo"
+            );
+
+
+        galleryFilters.forEach(
+            function(filterButton) {
+
+
+                filterButton.addEventListener(
+                    "click",
+                    function() {
+
+
+                        galleryFilters.forEach(
+                            function(button) {
+
+                                button.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        filterButton.classList.add(
+                            "active"
+                        );
+
+
+                        const filterValue =
+                            filterButton.dataset.filter;
+
+
+                        galleryPhotos.forEach(
+                            function(photo) {
+
+
+                                if (
+                                    filterValue === "all" ||
+                                    photo.dataset.category ===
+                                    filterValue
+                                ) {
+
+                                    photo.style.display =
+                                        "block";
+
+                                }
+
+
+                                else {
+
+                                    photo.style.display =
+                                        "none";
+
+                                }
+
+
+                            }
+                        );
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+
+        /* =========================================
+           PHOTO LIGHTBOX
+        ========================================= */
+
+        const galleryLightbox =
+            document.getElementById(
+                "galleryLightbox"
+            );
+
+
+        const galleryLightboxImage =
+            document.getElementById(
+                "galleryLightboxImage"
+            );
+
+
+        const galleryLightboxClose =
+            document.getElementById(
+                "galleryLightboxClose"
+            );
+
+
+        galleryPhotos.forEach(
+            function(photo) {
+
+
+                photo.addEventListener(
+                    "click",
+                    function() {
+
+
+                        const image =
+                            photo.querySelector("img");
+
+
+                        if (image) {
+
+
+                            galleryLightboxImage.src =
+                                image.src;
+
+
+                            galleryLightboxImage.alt =
+                                image.alt;
+
+
+                            galleryLightbox.classList.add(
+                                "active"
+                            );
+
+
+                        }
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+
+        galleryLightboxClose.addEventListener(
+            "click",
+            function() {
+
+
+                galleryLightbox.classList.remove(
+                    "active"
+                );
+
+
+                galleryLightboxImage.src = "";
+
+
+            }
+        );
+
+
+
+        galleryLightbox.addEventListener(
+            "click",
+            function(event) {
+
+
+                if (
+                    event.target ===
+                    galleryLightbox
+                ) {
+
+
+                    galleryLightbox.classList.remove(
+                        "active"
+                    );
+
+
+                    galleryLightboxImage.src = "";
+
+
+                }
+
+
+            }
+        );
+
+
+
+        /* =========================================
+           VIDEO MODAL
+        ========================================= */
+
+        const galleryVideoCards =
+            document.querySelectorAll(
+                ".gallery-video-thumbnail"
+            );
+
+
+        const galleryVideoModal =
+            document.getElementById(
+                "galleryVideoModal"
+            );
+
+
+        const galleryVideoPlayer =
+            document.getElementById(
+                "galleryVideoPlayer"
+            );
+
+
+        const galleryVideoClose =
+            document.getElementById(
+                "galleryVideoClose"
+            );
+
+
+        galleryVideoCards.forEach(
+            function(videoCard) {
+
+
+                videoCard.addEventListener(
+                    "click",
+                    function() {
+
+
+                        const videoSource =
+                            videoCard.dataset.video;
+
+
+                        galleryVideoPlayer.src =
+                            videoSource;
+
+
+                        galleryVideoModal.classList.add(
+                            "active"
+                        );
+
+
+                        galleryVideoPlayer.play()
+                            .catch(
+                                function() {
+
+                                    /* Browser may block autoplay */
+
+                                }
+                            );
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+
+        function closeGalleryVideo() {
+
+
+            galleryVideoPlayer.pause();
+
+
+            galleryVideoPlayer.currentTime = 0;
+
+
+            galleryVideoPlayer.removeAttribute(
+                "src"
+            );
+
+
+            galleryVideoPlayer.load();
+
+
+            galleryVideoModal.classList.remove(
+                "active"
+            );
+
+
+        }
+
+
+
+        galleryVideoClose.addEventListener(
+            "click",
+            closeGalleryVideo
+        );
+
+
+
+        galleryVideoModal.addEventListener(
+            "click",
+            function(event) {
+
+
+                if (
+                    event.target ===
+                    galleryVideoModal
+                ) {
+
+
+                    closeGalleryVideo();
+
+
+                }
+
+
+            }
+        );
+
+
+
+        /* =========================================
+           ESCAPE KEY
+        ========================================= */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+
+                if (event.key === "Escape") {
+
+
+                    if (
+                        galleryLightbox.classList.contains(
+                            "active"
+                        )
+                    ) {
+
+
+                        galleryLightbox.classList.remove(
+                            "active"
+                        );
+
+
+                        galleryLightboxImage.src = "";
+
+
+                    }
+
+
+                    if (
+                        galleryVideoModal.classList.contains(
+                            "active"
+                        )
+                    ) {
+
+
+                        closeGalleryVideo();
+
+
+                    }
+
+
+                }
+
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

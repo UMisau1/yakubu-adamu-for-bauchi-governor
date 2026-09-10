@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manifesto | Yakubu Campaign 2027</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================================
+           MANIFESTO PAGE
+           ISOLATED CSS
+        ========================================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        body.manifesto-page {
+
+            font-family: "Montserrat", sans-serif;
+            background: #f5f7f5;
+            color: #1f2922;
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .man-navbar {
+
+            background: #ffffff;
+            border-bottom: 1px solid #e7ece8;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+
+        .man-nav-container {
+
+            max-width: 1250px;
+            margin: auto;
+
+            min-height: 80px;
+
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+
+        .man-logo {
+
+            text-decoration: none;
+            color: #242b26;
+
+            font-size: 23px;
+            font-weight: 800;
+
+        }
+
+
+        .man-logo span {
+
+            color: #087443;
+
+        }
+
+
+        .man-nav-links {
+
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+        }
+
+
+        .man-nav-links a {
+
+            text-decoration: none;
+
+            color: #3d443f;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .man-nav-links a:hover,
+        .man-active-link {
+
+            color: #087443 !important;
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .man-hero {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(8, 88, 52, 0.98),
+                    rgba(18, 70, 48, 0.98)
+                );
+
+            color: #ffffff;
+
+            padding: 110px 25px;
+
+        }
+
+
+        .man-hero-container {
+
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            align-items: center;
+
+            gap: 70px;
+
+        }
+
+
+        .man-tag {
+
+            display: inline-block;
+
+            color: #ffbd22;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .man-hero h1 {
+
+            font-size: 58px;
+
+            line-height: 1.15;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .man-hero h1 span {
+
+            color: #ffbd22;
+
+        }
+
+
+        .man-hero-text {
+
+            color: #dce9e1;
+
+            max-width: 650px;
+
+            font-size: 16px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .man-button {
+
+            display: inline-block;
+
+            background: #ffbd22;
+
+            color: #1f2b23;
+
+            text-decoration: none;
+
+            padding: 15px 28px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+        }
+
+
+        /* =========================================
+           HERO VISION CARD
+        ========================================= */
+
+        .man-hero-card {
+
+            background: rgba(255,255,255,0.10);
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .man-hero-card-number {
+
+            font-size: 65px;
+
+            color: #ffbd22;
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .man-hero-card h3 {
+
+            font-size: 24px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .man-hero-card p {
+
+            color: #dce9e1;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        .man-main {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 110px 25px;
+
+        }
+
+
+        .man-section {
+
+            margin-bottom: 110px;
+
+        }
+
+
+        .man-section-tag {
+
+            display: block;
+
+            color: #087443;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .man-section-title {
+
+            color: #1f2922;
+
+            font-size: 42px;
+
+            line-height: 1.25;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .man-section-text {
+
+            color: #69736c;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================================
+           VISION
+        ========================================= */
+
+        .man-vision {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .man-vision-card {
+
+            background: #ffffff;
+
+            padding: 45px;
+
+            border-radius: 20px;
+
+            border-left: 6px solid #087443;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+
+        }
+
+
+        .man-vision-card h3 {
+
+            color: #174d35;
+
+            font-size: 25px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .man-vision-card p {
+
+            color: #69736c;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================================
+           PILLARS
+        ========================================= */
+
+        .man-pillars {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 45px;
+
+        }
+
+
+        .man-pillar {
+
+            background: #ffffff;
+
+            border: 1px solid #e6ece8;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .man-pillar:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+
+        }
+
+
+        .man-pillar-number {
+
+            width: 52px;
+            height: 52px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #eaf6ef;
+
+            color: #087443;
+
+            font-weight: 800;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .man-pillar h3 {
+
+            font-size: 20px;
+
+            color: #263028;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .man-pillar p {
+
+            color: #6c756e;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================
+           PRIORITIES
+        ========================================= */
+
+        .man-priorities {
+
+            background: #ffffff;
+
+            border-radius: 25px;
+
+            padding: 70px;
+
+            border: 1px solid #e7ece8;
+
+        }
+
+
+        .man-priority-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+
+            margin-top: 40px;
+
+        }
+
+
+        .man-priority {
+
+            background: #f4f8f5;
+
+            padding: 28px;
+
+            border-radius: 15px;
+
+            border-left: 4px solid #087443;
+
+        }
+
+
+        .man-priority h3 {
+
+            color: #087443;
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .man-priority p {
+
+            color: #69736c;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================
+           BAUCHI DEVELOPMENT
+        ========================================= */
+
+        .man-development {
+
+            background: #174d35;
+
+            color: #ffffff;
+
+            padding: 75px;
+
+            border-radius: 25px;
+
+        }
+
+
+        .man-development-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .man-development h2 {
+
+            font-size: 40px;
+
+            line-height: 1.25;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .man-development p {
+
+            color: #d6e6dc;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .man-development-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+
+        }
+
+
+        .man-development-item {
+
+            background: rgba(255,255,255,0.08);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            padding: 20px;
+
+            border-radius: 12px;
+
+        }
+
+
+        .man-development-item strong {
+
+            display: block;
+
+            color: #ffbd22;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* =========================================
+           CALL TO ACTION
+        ========================================= */
+
+        .man-closing {
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #087443,
+                    #174d35
+                );
+
+            color: #ffffff;
+
+            padding: 80px 30px;
+
+            border-radius: 25px;
+
+        }
+
+
+        .man-closing h2 {
+
+            font-size: 42px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .man-closing p {
+
+            color: #dce9e1;
+
+            max-width: 760px;
+
+            margin: auto;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .man-footer {
+
+            background: #102d20;
+
+            color: #b9c9bf;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            font-size: 13px;
+
+        }
+
+
+        .man-footer strong {
+
+            color: #ffffff;
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .man-hero-container,
+            .man-vision,
+            .man-development-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .man-pillars {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .man-navbar {
+
+                position: relative;
+
+            }
+
+
+            .man-nav-container {
+
+                flex-direction: column;
+
+                padding: 20px;
+
+                gap: 15px;
+
+            }
+
+
+            .man-nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+
+            }
+
+
+            .man-hero {
+
+                padding: 75px 20px;
+
+            }
+
+
+            .man-main {
+
+                padding: 75px 20px;
+
+            }
+
+
+            .man-hero h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .man-section-title {
+
+                font-size: 32px;
+
+            }
+
+
+            .man-pillars,
+            .man-priority-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .man-priorities,
+            .man-development {
+
+                padding: 40px 25px;
+
+            }
+
+
+            .man-development h2 {
+
+                font-size: 32px;
+
+            }
+
+
+            .man-closing h2 {
+
+                font-size: 32px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="manifesto-page">
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="man-navbar">
+
+        <div class="man-nav-container">
+
+
+            <a
+                href="index.html"
+                class="man-logo"
+            >
+
+                YAKUBU <span>Campaign</span>
+
+            </a>
+
+
+            <div class="man-nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a
+                    href="manifesto.html"
+                    class="man-active-link"
+                >
+                    Manifesto
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="news.html">
+                    News
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="man-hero">
+
+        <div class="man-hero-container">
+
+
+            <div>
+
+                <span class="man-tag">
+
+                    Campaign Manifesto
+
+                </span>
+
+
+                <h1>
+
+                    Together We Can Build
+                    <span>A Greater Bauchi State</span>
+
+                </h1>
+
+
+                <p class="man-hero-text">
+
+                    A vision for responsible leadership,
+                    stronger institutions, economic opportunity
+                    and sustainable development for the people
+                    of Bauchi State.
+
+                </p>
+
+
+                <a
+                    href="#man-priorities"
+                    class="man-button"
+                >
+
+                    Explore Our Priorities
+
+                </a>
+
+            </div>
+
+
+
+            <div class="man-hero-card">
+
+                <div class="man-hero-card-number">
+
+                    2027
+
+                </div>
+
+
+                <h3>
+
+                    A Vision for Progress
+
+                </h3>
+
+
+                <p>
+
+                    Building a future where every community,
+                    young person, business and family has the
+                    opportunity to grow and contribute to the
+                    development of Bauchi State.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="man-main">
+
+
+        <!-- VISION -->
+
+        <section class="man-section">
+
+            <div class="man-vision">
+
+
+                <div>
+
+                    <span class="man-section-tag">
+
+                        Our Vision
+
+                    </span>
+
+
+                    <h2 class="man-section-title">
+
+                        A Prosperous and
+                        United Bauchi State
+
+                    </h2>
+
+
+                    <p class="man-section-text">
+
+                        Our vision is to promote inclusive
+                        development that reaches communities
+                        across Bauchi State and creates
+                        opportunities for all citizens.
+
+                    </p>
+
+
+                    <br>
+
+
+                    <p class="man-section-text">
+
+                        The campaign is built around responsible
+                        leadership, efficient management of
+                        resources and a long-term commitment
+                        to sustainable progress.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="man-vision-card">
+
+                    <h3>
+
+                        Our Commitment
+
+                    </h3>
+
+
+                    <p>
+
+                        To work with the people of Bauchi State
+                        in building stronger institutions,
+                        improving economic opportunities and
+                        creating a future driven by education,
+                        innovation and responsible governance.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PILLARS -->
+
+        <section class="man-section">
+
+
+            <span class="man-section-tag">
+
+                Our Pillars
+
+            </span>
+
+
+            <h2 class="man-section-title">
+
+                The Foundation of Our Vision
+
+            </h2>
+
+
+            <div class="man-pillars">
+
+
+                <div class="man-pillar">
+
+                    <div class="man-pillar-number">
+
+                        01
+
+                    </div>
+
+
+                    <h3>
+
+                        Good Governance
+
+                    </h3>
+
+
+                    <p>
+
+                        Promoting accountability,
+                        transparency and responsible
+                        management of public resources.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="man-pillar">
+
+                    <div class="man-pillar-number">
+
+                        02
+
+                    </div>
+
+
+                    <h3>
+
+                        Economic Growth
+
+                    </h3>
+
+
+                    <p>
+
+                        Supporting businesses, investment,
+                        entrepreneurship and economic
+                        opportunities.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="man-pillar">
+
+                    <div class="man-pillar-number">
+
+                        03
+
+                    </div>
+
+
+                    <h3>
+
+                        Education
+
+                    </h3>
+
+
+                    <p>
+
+                        Supporting quality education,
+                        skills development and investment
+                        in human capital.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="man-pillar">
+
+                    <div class="man-pillar-number">
+
+                        04
+
+                    </div>
+
+
+                    <h3>
+
+                        Healthcare
+
+                    </h3>
+
+
+                    <p>
+
+                        Supporting improved access to
+                        healthcare services and stronger
+                        health institutions.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="man-pillar">
+
+                    <div class="man-pillar-number">
+
+                        05
+
+                    </div>
+
+
+                    <h3>
+
+                        Agriculture
+
+                    </h3>
+
+
+                    <p>
+
+                        Supporting farmers, agricultural
+                        productivity and opportunities
+                        across rural communities.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="man-pillar">
+
+                    <div class="man-pillar-number">
+
+                        06
+
+                    </div>
+
+
+                    <h3>
+
+                        Youth Development
+
+                    </h3>
+
+
+                    <p>
+
+                        Creating opportunities for young
+                        people through skills, innovation,
+                        entrepreneurship and employment.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PRIORITIES -->
+
+        <section
+            class="man-section"
+            id="man-priorities"
+        >
+
+
+            <div class="man-priorities">
+
+
+                <span class="man-section-tag">
+
+                    Key Priorities
+
+                </span>
+
+
+                <h2 class="man-section-title">
+
+                    Areas of Focus
+
+                </h2>
+
+
+                <div class="man-priority-grid">
+
+
+                    <div class="man-priority">
+
+                        <h3>
+
+                            Stronger Economy
+
+                        </h3>
+
+
+                        <p>
+
+                            Encouraging investment, supporting
+                            local businesses and creating an
+                            environment for economic growth.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="man-priority">
+
+                        <h3>
+
+                            Quality Education
+
+                        </h3>
+
+
+                        <p>
+
+                            Supporting schools, teachers,
+                            learning infrastructure and
+                            skills development.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="man-priority">
+
+                        <h3>
+
+                            Community Development
+
+                        </h3>
+
+
+                        <p>
+
+                            Supporting infrastructure and
+                            development projects that improve
+                            communities across the state.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="man-priority">
+
+                        <h3>
+
+                            Youth Opportunities
+
+                        </h3>
+
+
+                        <p>
+
+                            Promoting entrepreneurship,
+                            vocational training and economic
+                            opportunities for young people.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="man-priority">
+
+                        <h3>
+
+                            Agricultural Development
+
+                        </h3>
+
+
+                        <p>
+
+                            Supporting farmers through
+                            improved access to knowledge,
+                            markets and modern practices.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="man-priority">
+
+                        <h3>
+
+                            Effective Institutions
+
+                        </h3>
+
+
+                        <p>
+
+                            Building institutions that
+                            deliver efficient and reliable
+                            services to the people.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DEVELOPMENT -->
+
+        <section class="man-section">
+
+
+            <div class="man-development">
+
+
+                <div class="man-development-grid">
+
+
+                    <div>
+
+                        <span
+                            class="man-section-tag"
+                            style="color:#ffbd22;"
+                        >
+
+                            Development Agenda
+
+                        </span>
+
+
+                        <h2>
+
+                            Development That Reaches
+                            Every Community
+
+                        </h2>
+
+
+                        <p>
+
+                            Sustainable progress requires
+                            development policies that consider
+                            both urban and rural communities.
+
+                        </p>
+
+
+                        <p>
+
+                            Our vision focuses on building
+                            stronger communities and creating
+                            opportunities across all parts
+                            of Bauchi State.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="man-development-list">
+
+
+                        <div class="man-development-item">
+
+                            <strong>
+
+                                Inclusive Development
+
+                            </strong>
+
+                            Development opportunities designed
+                            to reach communities across Bauchi
+                            State.
+
+                        </div>
+
+
+
+                        <div class="man-development-item">
+
+                            <strong>
+
+                                Human Capital
+
+                            </strong>
+
+                            Investment in education, skills
+                            and the capacity of the people.
+
+                        </div>
+
+
+
+                        <div class="man-development-item">
+
+                            <strong>
+
+                                Sustainable Progress
+
+                            </strong>
+
+                            Long-term planning that creates
+                            lasting benefits for future
+                            generations.
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CLOSING -->
+
+        <section class="man-closing">
+
+
+            <h2>
+
+                Join the Movement for Progress
+
+            </h2>
+
+
+            <p>
+
+                The future of Bauchi State will be shaped
+                through unity, responsibility and a shared
+                commitment to development. Together, we can
+                build a stronger and more prosperous future.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="man-footer">
+
+        <p>
+
+            © 2026
+            <strong>Yakubu Campaign</strong>.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biography | Dr. Yakubu Adamu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           BIOGRAPHY PAGE - ISOLATED CSS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body.biography-page {
+            font-family: "Montserrat", sans-serif;
+            background: #f6f7f5;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .bio-navbar {
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #e6e8e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .bio-nav-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 0 25px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bio-logo {
+            text-decoration: none;
+            color: #20242a;
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .bio-logo span {
+            color: #0b6b42;
+        }
+
+        .bio-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .bio-nav-links a {
+            text-decoration: none;
+            color: #353a40;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .bio-nav-links a:hover,
+        .bio-nav-links a.bio-active-link {
+            color: #087443;
+        }
+
+        /* =====================================================
+           HERO SECTION
+        ===================================================== */
+
+        .bio-hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 78, 48, 0.96),
+                    rgba(13, 105, 67, 0.92)
+                );
+            padding: 90px 25px;
+            color: #ffffff;
+        }
+
+        .bio-hero-container {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .bio-badge {
+            display: inline-block;
+            background: rgba(255, 190, 31, 0.15);
+            color: #ffbd22;
+            border: 1px solid rgba(255, 190, 31, 0.35);
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .bio-hero h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .bio-hero h1 span {
+            color: #ffbd22;
+        }
+
+        .bio-hero-title {
+            font-size: 18px;
+            color: #d6e5dc;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .bio-hero-description {
+            max-width: 650px;
+            color: #e4eee8;
+            font-size: 16px;
+        }
+
+        .bio-hero-image-box {
+            position: relative;
+        }
+
+        .bio-hero-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+            border: 7px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .bio-hero-card {
+            position: absolute;
+            left: -35px;
+            bottom: 30px;
+            background: #ffffff;
+            color: #1f2a24;
+            padding: 22px 25px;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+            min-width: 250px;
+        }
+
+        .bio-hero-card small {
+            display: block;
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .bio-hero-card strong {
+            color: #0b6b42;
+            font-size: 17px;
+        }
+
+        /* =====================================================
+           PAGE CONTAINER
+        ===================================================== */
+
+        .bio-main-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        /* =====================================================
+           INTRODUCTION
+        ===================================================== */
+
+        .bio-intro-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            margin-bottom: 100px;
+            align-items: start;
+        }
+
+        .bio-section-tag {
+            display: inline-block;
+            color: #087443;
+            font-weight: 800;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .bio-section-heading {
+            font-size: 38px;
+            line-height: 1.25;
+            color: #1e2922;
+            margin-bottom: 20px;
+        }
+
+        .bio-section-text {
+            color: #616963;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .bio-quick-facts {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border: 1px solid #edf0ed;
+        }
+
+        .bio-quick-facts h3 {
+            color: #174e35;
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+
+        .bio-fact-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid #edf0ed;
+        }
+
+        .bio-fact-item:last-child {
+            border-bottom: none;
+        }
+
+        .bio-fact-label {
+            color: #777;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .bio-fact-value {
+            text-align: right;
+            color: #222;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           FULL WIDTH SECTIONS
+        ===================================================== */
+
+        .bio-content-section {
+            margin-bottom: 100px;
+        }
+
+        .bio-content-header {
+            max-width: 760px;
+            margin-bottom: 45px;
+        }
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        .bio-education-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .bio-education-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #e8ece8;
+            transition: 0.3s;
+        }
+
+        .bio-education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .bio-education-year {
+            display: inline-block;
+            color: #0a7545;
+            background: #eaf6ef;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .bio-education-card h3 {
+            font-size: 19px;
+            color: #202a23;
+            margin-bottom: 10px;
+        }
+
+        .bio-education-card p {
+            color: #707770;
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           CAREER
+        ===================================================== */
+
+        .bio-career-timeline {
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .bio-career-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 40px;
+            padding: 0 0 45px 0;
+            position: relative;
+        }
+
+        .bio-career-date {
+            color: #0b7043;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .bio-career-content {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #0b7043;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .bio-career-content h3 {
+            color: #202a23;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .bio-career-role {
+            color: #e6a900;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .bio-career-content p {
+            color: #666d67;
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           PUBLIC SERVICE
+        ===================================================== */
+
+        .bio-public-service {
+            background: #164d35;
+            border-radius: 25px;
+            padding: 60px;
+            color: #ffffff;
+        }
+
+        .bio-public-service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .bio-public-service h2 {
+            font-size: 38px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .bio-public-service p {
+            color: #d9e8df;
+            margin-bottom: 18px;
+        }
+
+        .bio-public-service-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 18px;
+            padding: 35px;
+        }
+
+        .bio-public-service-card h3 {
+            color: #ffbd22;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* =====================================================
+           MEMBERSHIPS
+        ===================================================== */
+
+        .bio-membership-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .bio-membership-item {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid #e8ece8;
+            font-weight: 600;
+            color: #38433c;
+        }
+
+        /* =====================================================
+           PERSONAL LIFE
+        ===================================================== */
+
+        .bio-personal-section {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 60px;
+            border: 1px solid #e8ece8;
+        }
+
+        .bio-personal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .bio-interest-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .bio-interest {
+            background: #eaf6ef;
+            color: #087443;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           FINAL SECTION
+        ===================================================== */
+
+        .bio-closing-section {
+            margin-top: 100px;
+            text-align: center;
+            padding: 70px 30px;
+            border-radius: 25px;
+            background: linear-gradient(
+                135deg,
+                #0a6b41,
+                #164d35
+            );
+            color: #ffffff;
+        }
+
+        .bio-closing-section h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .bio-closing-section p {
+            max-width: 750px;
+            margin: auto;
+            color: #dce9e1;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .bio-footer {
+            background: #102d20;
+            color: #b9c9bf;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        .bio-footer strong {
+            color: #ffffff;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .bio-nav-links {
+                gap: 15px;
+            }
+
+            .bio-hero-container,
+            .bio-intro-section,
+            .bio-public-service-grid,
+            .bio-personal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bio-hero h1 {
+                font-size: 42px;
+            }
+
+            .bio-hero-image {
+                height: 420px;
+            }
+
+            .bio-education-grid,
+            .bio-membership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bio-career-item {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .bio-navbar {
+                position: relative;
+            }
+
+            .bio-nav-container {
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .bio-nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .bio-hero {
+                padding: 60px 20px;
+            }
+
+            .bio-main-container {
+                padding: 60px 20px;
+            }
+
+            .bio-hero h1 {
+                font-size: 34px;
+            }
+
+            .bio-section-heading {
+                font-size: 30px;
+            }
+
+            .bio-public-service,
+            .bio-personal-section {
+                padding: 35px 25px;
+            }
+
+            .bio-public-service h2,
+            .bio-closing-section h2 {
+                font-size: 30px;
+            }
+
+            .bio-hero-card {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                margin-top: -20px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .bio-fact-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .bio-fact-value {
+                text-align: left;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body class="biography-page">
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="bio-navbar">
+
+        <div class="bio-nav-container">
+
+            <a href="index.html" class="bio-logo">
+                YAKUBU <span>Campaign</span>
+            </a>
+
+            <div class="bio-nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="biography.html" class="bio-active-link">
+                    Biography
+                </a>
+
+                <a href="leadership.html">
+                    Leadership
+                </a>
+
+                <a href="achievements.html">
+                    Achievements
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="bio-hero">
+
+        <div class="bio-hero-container">
+
+            <div class="bio-hero-content">
+
+                <span class="bio-badge">
+                    OFFICIAL BIOGRAPHY
+                </span>
+
+                <h1>
+                    Dr. Yakubu <span>Adamu, PhD</span>
+                </h1>
+
+                <p class="bio-hero-title">
+                    Banker • Finance Professional • Public Administrator • Politician
+                </p>
+
+                <p class="bio-hero-description">
+
+                    Dr. Yakubu Adamu, PhD, is a Nigerian banker,
+                    financial management professional, public administrator
+                    and politician with experience spanning banking,
+                    public finance, economic development and government
+                    administration.
+
+                </p>
+
+            </div>
+
+
+            <div class="bio-hero-image-box">
+
+                <!-- SAUKA HOTON DR. YAKUBU ANAN -->
+
+                <img
+                    src="images/yakubu-adamu.jpg"
+                    alt="Dr. Yakubu Adamu"
+                    class="bio-hero-image"
+                >
+
+                <div class="bio-hero-card">
+
+                    <small>
+                        Political Profile
+                    </small>
+
+                    <strong>
+                        Bauchi State Governorship Journey
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="bio-main-container">
+
+
+        <!-- ABOUT -->
+
+        <section class="bio-intro-section">
+
+            <div>
+
+                <span class="bio-section-tag">
+                    About Dr. Yakubu Adamu
+                </span>
+
+                <h2 class="bio-section-heading">
+                    A Journey of Finance,
+                    Service and Leadership
+                </h2>
+
+                <p class="bio-section-text">
+
+                    Dr. Yakubu Adamu is a finance and management
+                    professional whose career has combined experience
+                    in the private banking sector and public service.
+
+                </p>
+
+                <p class="bio-section-text">
+
+                    Before entering government, he spent several years
+                    working in Nigeria's financial services industry,
+                    holding positions in marketing, retail banking,
+                    business development and public-sector banking.
+
+                </p>
+
+                <p class="bio-section-text">
+
+                    In 2023, he transitioned into public service when
+                    he was appointed Commissioner for Finance and
+                    Economic Development in Bauchi State.
+
+                </p>
+
+            </div>
+
+
+            <!-- QUICK FACTS -->
+
+            <div class="bio-quick-facts">
+
+                <h3>Quick Facts</h3>
+
+                <div class="bio-fact-item">
+
+                    <span class="bio-fact-label">
+                        Full Name
+                    </span>
+
+                    <span class="bio-fact-value">
+                        Dr. Yakubu Adamu, PhD
+                    </span>
+
+                </div>
+
+
+                <div class="bio-fact-item">
+
+                    <span class="bio-fact-label">
+                        Date of Birth
+                    </span>
+
+                    <span class="bio-fact-value">
+                        12 August 1980
+                    </span>
+
+                </div>
+
+
+                <div class="bio-fact-item">
+
+                    <span class="bio-fact-label">
+                        Place of Birth
+                    </span>
+
+                    <span class="bio-fact-value">
+                        Gwabba, Bauchi
+                    </span>
+
+                </div>
+
+
+                <div class="bio-fact-item">
+
+                    <span class="bio-fact-label">
+                        Hometown
+                    </span>
+
+                    <span class="bio-fact-value">
+                        Gulbun, Giade LGA
+                    </span>
+
+                </div>
+
+
+                <div class="bio-fact-item">
+
+                    <span class="bio-fact-label">
+                        Profession
+                    </span>
+
+                    <span class="bio-fact-value">
+                        Finance & Public Administration
+                    </span>
+
+                </div>
+
+
+                <div class="bio-fact-item">
+
+                    <span class="bio-fact-label">
+                        Traditional Titles
+                    </span>
+
+                    <span class="bio-fact-value">
+                        Wazirin Giade & Sardaunan Gulbun
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EARLY LIFE -->
+
+        <section class="bio-content-section">
+
+            <div class="bio-content-header">
+
+                <span class="bio-section-tag">
+                    Early Life & Background
+                </span>
+
+                <h2 class="bio-section-heading">
+                    Roots and Early Years
+                </h2>
+
+                <p class="bio-section-text">
+
+                    Dr. Yakubu Adamu was born on 12 August 1980
+                    in Gwabba, Bauchi metropolis, Bauchi State, Nigeria.
+
+                </p>
+
+                <p class="bio-section-text">
+
+                    He hails from Gulbun, Doguwa Ward,
+                    Giade Local Government Area of Bauchi State.
+
+                    His early life was shaped by experiences across
+                    Gwabba, Ilelah, where he began his primary education,
+                    and Karofin Madaki, where he later lived.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EDUCATION -->
+
+        <section class="bio-content-section">
+
+            <div class="bio-content-header">
+
+                <span class="bio-section-tag">
+                    Educational Journey
+                </span>
+
+                <h2 class="bio-section-heading">
+                    From Kofar Fada to PhD
+                </h2>
+
+                <p class="bio-section-text">
+
+                    His academic journey reflects years of educational
+                    development from primary school through advanced
+                    university and doctoral studies.
+
+                </p>
+
+            </div>
+
+
+            <div class="bio-education-grid">
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        1986 – 1992
+                    </span>
+
+                    <h3>
+                        Kofar Fada Primary School
+                    </h3>
+
+                    <p>
+                        Primary Education
+                    </p>
+
+                </div>
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        1992 – 1995
+                    </span>
+
+                    <h3>
+                        Pilot Junior Secondary School
+                    </h3>
+
+                    <p>
+                        Junior Secondary Education
+                    </p>
+
+                </div>
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        1995 – 1998
+                    </span>
+
+                    <h3>
+                        Government Science Secondary School, Toro
+                    </h3>
+
+                    <p>
+                        Secondary Education
+                    </p>
+
+                </div>
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        1999 – 2001
+                    </span>
+
+                    <h3>
+                        Abubakar Tatari Ali Polytechnic
+                    </h3>
+
+                    <p>
+                        Advanced Level Programme
+                    </p>
+
+                </div>
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        2006
+                    </span>
+
+                    <h3>
+                        B.Tech in Business Management
+                    </h3>
+
+                    <p>
+                        Abubakar Tafawa Balewa University, Bauchi
+                    </p>
+
+                </div>
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        2013
+                    </span>
+
+                    <h3>
+                        Master of Business Administration
+                    </h3>
+
+                    <p>
+                        MBA
+                    </p>
+
+                </div>
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        2014 – 2016
+                    </span>
+
+                    <h3>
+                        MSc in Finance, Investment and Banking
+                    </h3>
+
+                    <p>
+                        International University of Bamenda, Cameroon
+                    </p>
+
+                </div>
+
+
+                <div class="bio-education-card">
+
+                    <span class="bio-education-year">
+                        2020
+                    </span>
+
+                    <h3>
+                        Doctor of Philosophy in Management
+                    </h3>
+
+                    <p>
+                        International University of Bamenda, Cameroon
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROFESSIONAL CAREER -->
+
+        <section class="bio-content-section">
+
+            <div class="bio-content-header">
+
+                <span class="bio-section-tag">
+                    Professional Career
+                </span>
+
+                <h2 class="bio-section-heading">
+                    Banking and Financial Services
+                </h2>
+
+            </div>
+
+
+            <div class="bio-career-timeline">
+
+
+                <div class="bio-career-item">
+
+                    <div class="bio-career-date">
+                        2008 – 2012
+                    </div>
+
+                    <div class="bio-career-content">
+
+                        <h3>
+                            First City Monument Bank
+                        </h3>
+
+                        <div class="bio-career-role">
+                            Marketing Officer
+                        </div>
+
+                        <p>
+
+                            Dr. Adamu began his professional banking
+                            career at FCMB, developing experience in
+                            customer relations, marketing and banking
+                            operations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bio-career-item">
+
+                    <div class="bio-career-date">
+                        2012 – 2019
+                    </div>
+
+                    <div class="bio-career-content">
+
+                        <h3>
+                            Skye Bank Plc
+                        </h3>
+
+                        <div class="bio-career-role">
+                            Head of Branch Retail & Business Development Manager
+                        </div>
+
+                        <p>
+
+                            He held leadership and business development
+                            responsibilities, contributing to banking
+                            growth, customer relationship management
+                            and business strategy.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bio-career-item">
+
+                    <div class="bio-career-date">
+                        2019 – 2023
+                    </div>
+
+                    <div class="bio-career-content">
+
+                        <h3>
+                            Polaris Bank
+                        </h3>
+
+                        <div class="bio-career-role">
+                            Team Lead, Public Sector Northeast
+                        </div>
+
+                        <p>
+
+                            He served in senior responsibilities
+                            involving public-sector banking and business
+                            development across the Northeast region.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PUBLIC SERVICE -->
+
+        <section class="bio-public-service">
+
+            <div class="bio-public-service-grid">
+
+
+                <div>
+
+                    <span class="bio-section-tag"
+                          style="color:#ffbd22;">
+
+                        Public Service & Politics
+
+                    </span>
+
+
+                    <h2>
+                        Commissioner for Finance and Economic Development
+                    </h2>
+
+
+                    <p>
+
+                        Dr. Yakubu Adamu formally entered public
+                        office in 2023 when he was appointed Commissioner
+                        for the Bauchi State Ministry of Finance and
+                        Economic Development.
+
+                    </p>
+
+
+                    <p>
+
+                        His professional background in banking,
+                        financial management and economic development
+                        formed an important part of his transition
+                        into public administration.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="bio-public-service-card">
+
+                    <h3>
+                        2023 – April 2026
+                    </h3>
+
+                    <p>
+
+                        Served as Commissioner for Finance and
+                        Economic Development in Bauchi State.
+
+                    </p>
+
+                    <p>
+
+                        In April 2026, he resigned from public office
+                        to pursue his governorship ambition.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MEMBERSHIPS -->
+
+        <section class="bio-content-section"
+                 style="margin-top:100px;">
+
+            <div class="bio-content-header">
+
+                <span class="bio-section-tag">
+                    Professional Memberships
+                </span>
+
+                <h2 class="bio-section-heading">
+                    Professional Affiliations
+                </h2>
+
+            </div>
+
+
+            <div class="bio-membership-grid">
+
+
+                <div class="bio-membership-item">
+                    Nigerian Institute of Management (Chartered)
+                </div>
+
+
+                <div class="bio-membership-item">
+                    Chartered Institute of Economics
+                </div>
+
+
+                <div class="bio-membership-item">
+                    Chartered Institute of Bankers of Nigeria
+                </div>
+
+
+                <div class="bio-membership-item">
+                    Chartered Institute of Loan and Risk Management
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PERSONAL LIFE -->
+
+        <section class="bio-personal-section">
+
+            <div class="bio-personal-grid">
+
+
+                <div>
+
+                    <span class="bio-section-tag">
+                        Traditional Titles
+                    </span>
+
+                    <h2 class="bio-section-heading">
+                        Community and Traditional Leadership
+                    </h2>
+
+                    <p class="bio-section-text">
+
+                        Dr. Yakubu Adamu holds the traditional titles
+                        of Wazirin Giade and Sardaunan Gulbun,
+                        reflecting his connection with traditional
+                        institutions and local communities.
+
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <span class="bio-section-tag">
+                        Personal Life
+                    </span>
+
+                    <h2 class="bio-section-heading">
+                        Beyond Public Service
+                    </h2>
+
+                    <p class="bio-section-text">
+
+                        Dr. Yakubu Adamu is married and has children.
+                        Outside his professional and public
+                        responsibilities, his interests include:
+
+                    </p>
+
+
+                    <div class="bio-interest-list">
+
+                        <span class="bio-interest">
+                            Football
+                        </span>
+
+                        <span class="bio-interest">
+                            Reading
+                        </span>
+
+                        <span class="bio-interest">
+                            Research
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CLOSING -->
+
+        <section class="bio-closing-section">
+
+            <h2>
+                A Journey of Service and Leadership
+            </h2>
+
+            <p>
+
+                From his early education in Bauchi State to a career
+                spanning banking, finance, public administration and
+                public service, Dr. Yakubu Adamu's journey reflects
+                a combination of academic development, professional
+                experience and leadership.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="bio-footer">
+
+        <p>
+            © 2026
+            <strong>Yakubu Campaign</strong>.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

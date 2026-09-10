@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>News | Yakubu Campaign 2027</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================================
+           NEWS PAGE
+           ISOLATED CSS
+        ========================================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        body.news-page {
+
+            font-family: "Montserrat", sans-serif;
+
+            background: #f5f7f5;
+
+            color: #1f2922;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .news-navbar {
+
+            background: #ffffff;
+
+            border-bottom: 1px solid #e7ece8;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+        }
+
+
+        .news-nav-container {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            min-height: 80px;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .news-logo {
+
+            text-decoration: none;
+
+            color: #242b26;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+        }
+
+
+        .news-logo span {
+
+            color: #087443;
+
+        }
+
+
+        .news-nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+        }
+
+
+        .news-nav-links a {
+
+            text-decoration: none;
+
+            color: #3d443f;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .news-nav-links a:hover,
+        .news-active-link {
+
+            color: #087443 !important;
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .news-hero {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(8, 116, 67, 0.98),
+                    rgba(23, 77, 53, 0.98)
+                );
+
+            color: #ffffff;
+
+            padding: 100px 25px;
+
+            text-align: center;
+
+        }
+
+
+        .news-hero-container {
+
+            max-width: 900px;
+
+            margin: auto;
+
+        }
+
+
+        .news-tag {
+
+            display: inline-block;
+
+            color: #ffbd22;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .news-hero h1 {
+
+            font-size: 58px;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .news-hero h1 span {
+
+            color: #ffbd22;
+
+        }
+
+
+        .news-hero p {
+
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #dce9e1;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        .news-main {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 100px 25px;
+
+        }
+
+
+        .news-section {
+
+            margin-bottom: 100px;
+
+        }
+
+
+        .news-section-tag {
+
+            display: block;
+
+            color: #087443;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .news-section-title {
+
+            font-size: 42px;
+
+            color: #1f2922;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .news-section-text {
+
+            color: #69736c;
+
+            max-width: 750px;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================================
+           FEATURED NEWS
+        ========================================= */
+
+        .news-featured {
+
+            margin-top: 45px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            background: #ffffff;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            border: 1px solid #e5ebe7;
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+
+        }
+
+
+        .news-featured-image {
+
+            min-height: 420px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #087443,
+                    #174d35
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 40px;
+
+        }
+
+
+        .news-featured-image span {
+
+            font-size: 90px;
+
+            color: #ffbd22;
+
+            font-weight: 800;
+
+        }
+
+
+        .news-featured-content {
+
+            padding: 55px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+        }
+
+
+        .news-category {
+
+            color: #087443;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .news-featured-content h2 {
+
+            font-size: 32px;
+
+            line-height: 1.35;
+
+            margin-bottom: 18px;
+
+            color: #1f2922;
+
+        }
+
+
+        .news-featured-content p {
+
+            color: #69736c;
+
+            font-size: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .news-meta {
+
+            display: flex;
+
+            gap: 18px;
+
+            flex-wrap: wrap;
+
+            color: #79827c;
+
+            font-size: 12px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .news-button {
+
+            display: inline-block;
+
+            width: fit-content;
+
+            text-decoration: none;
+
+            background: #087443;
+
+            color: #ffffff;
+
+            padding: 14px 25px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =========================================
+           NEWS GRID
+        ========================================= */
+
+        .news-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 45px;
+
+        }
+
+
+        .news-card {
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid #e6ece8;
+
+            transition: 0.3s;
+
+        }
+
+
+        .news-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+
+        }
+
+
+        .news-card-image {
+
+            height: 190px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #dcefe3,
+                    #b8d9c4
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .news-card-image span {
+
+            font-size: 50px;
+
+            font-weight: 800;
+
+            color: #087443;
+
+        }
+
+
+        .news-card-content {
+
+            padding: 28px;
+
+        }
+
+
+        .news-card-category {
+
+            color: #087443;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .news-card h3 {
+
+            font-size: 19px;
+
+            line-height: 1.45;
+
+            margin-bottom: 12px;
+
+            color: #263028;
+
+        }
+
+
+        .news-card p {
+
+            color: #6c756e;
+
+            font-size: 13px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .news-card-footer {
+
+            border-top: 1px solid #edf0ee;
+
+            padding-top: 16px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+        .news-date {
+
+            color: #8a928d;
+
+            font-size: 11px;
+
+        }
+
+
+        .news-read {
+
+            text-decoration: none;
+
+            color: #087443;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+        }
+
+
+        /* =========================================
+           NEWSLETTER
+        ========================================= */
+
+        .news-newsletter {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #174d35,
+                    #087443
+                );
+
+            border-radius: 25px;
+
+            padding: 70px;
+
+            color: #ffffff;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+        }
+
+
+        .news-newsletter h2 {
+
+            font-size: 38px;
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .news-newsletter p {
+
+            color: #dce9e1;
+
+            font-size: 14px;
+
+        }
+
+
+        .news-form {
+
+            display: flex;
+
+            gap: 12px;
+
+        }
+
+
+        .news-form input {
+
+            flex: 1;
+
+            padding: 16px 20px;
+
+            border-radius: 30px;
+
+            border: none;
+
+            outline: none;
+
+            font-family: inherit;
+
+        }
+
+
+        .news-form button {
+
+            border: none;
+
+            padding: 16px 25px;
+
+            border-radius: 30px;
+
+            background: #ffbd22;
+
+            color: #263028;
+
+            font-family: inherit;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .news-footer {
+
+            background: #102d20;
+
+            color: #b9c9bf;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            font-size: 13px;
+
+        }
+
+
+        .news-footer strong {
+
+            color: #ffffff;
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+
+            .news-featured {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .news-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .news-newsletter {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+
+            .news-navbar {
+
+                position: relative;
+
+            }
+
+
+            .news-nav-container {
+
+                flex-direction: column;
+
+                padding: 20px;
+
+                gap: 15px;
+
+            }
+
+
+            .news-nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+
+            }
+
+
+            .news-hero {
+
+                padding: 75px 20px;
+
+            }
+
+
+            .news-hero h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .news-main {
+
+                padding: 75px 20px;
+
+            }
+
+
+            .news-section-title {
+
+                font-size: 32px;
+
+            }
+
+
+            .news-featured-content {
+
+                padding: 35px 25px;
+
+            }
+
+
+            .news-featured-image {
+
+                min-height: 280px;
+
+            }
+
+
+            .news-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .news-newsletter {
+
+                padding: 45px 25px;
+
+            }
+
+
+            .news-newsletter h2 {
+
+                font-size: 30px;
+
+            }
+
+
+            .news-form {
+
+                flex-direction: column;
+
+            }
+
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="news-page">
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="news-navbar">
+
+        <div class="news-nav-container">
+
+
+            <a
+                href="index.html"
+                class="news-logo"
+            >
+
+                YAKUBU <span>Campaign</span>
+
+            </a>
+
+
+            <div class="news-nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="manifesto.html">
+                    Manifesto
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a
+                    href="news.html"
+                    class="news-active-link"
+                >
+                    News
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="news-hero">
+
+        <div class="news-hero-container">
+
+
+            <span class="news-tag">
+
+                Campaign Updates
+
+            </span>
+
+
+            <h1>
+
+                Latest
+                <span>News & Updates</span>
+
+            </h1>
+
+
+            <p>
+
+                Follow campaign activities, announcements,
+                community engagements and important updates
+                from the Yakubu Campaign.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MAIN -->
+
+    <main class="news-main">
+
+
+        <!-- FEATURED NEWS -->
+
+        <section class="news-section">
+
+
+            <span class="news-section-tag">
+
+                Featured Story
+
+            </span>
+
+
+            <h2 class="news-section-title">
+
+                Latest Campaign Highlight
+
+            </h2>
+
+
+            <p class="news-section-text">
+
+                Important updates and developments from
+                campaign activities across Bauchi State.
+
+            </p>
+
+
+            <div class="news-featured">
+
+
+                <div class="news-featured-image">
+
+                    <span>2027</span>
+
+                </div>
+
+
+
+                <div class="news-featured-content">
+
+
+                    <div class="news-category">
+
+                        Campaign Update
+
+                    </div>
+
+
+                    <h2>
+
+                        Building a Stronger Movement
+                        for the Future of Bauchi State
+
+                    </h2>
+
+
+                    <p>
+
+                        The Yakubu Campaign continues to engage
+                        supporters, community leaders and young
+                        people across Bauchi State as preparations
+                        for the 2027 campaign continue.
+
+                    </p>
+
+
+                    <div class="news-meta">
+
+                        <span>
+
+                            📅 August 2026
+
+                        </span>
+
+
+                        <span>
+
+                            ✍ Campaign Media Team
+
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="news-button"
+                    >
+
+                        Read Full Story
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- LATEST NEWS -->
+
+        <section class="news-section">
+
+
+            <span class="news-section-tag">
+
+                Latest News
+
+            </span>
+
+
+            <h2 class="news-section-title">
+
+                Campaign Updates
+
+            </h2>
+
+
+            <div class="news-grid">
+
+
+                <!-- NEWS 1 -->
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <span>01</span>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-card-category">
+
+                            Community
+
+                        </div>
+
+
+                        <h3>
+
+                            Campaign Team Meets Community
+                            Leaders Across Bauchi
+
+                        </h3>
+
+
+                        <p>
+
+                            Discussions focused on community
+                            development and strengthening
+                            engagement across the state.
+
+                        </p>
+
+
+                        <div class="news-card-footer">
+
+                            <span class="news-date">
+
+                                August 2026
+
+                            </span>
+
+
+                            <a
+                                href="#"
+                                class="news-read"
+                            >
+
+                                Read More →
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- NEWS 2 -->
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <span>02</span>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-card-category">
+
+                            Youth
+
+                        </div>
+
+
+                        <h3>
+
+                            Youth Engagement and
+                            Development Discussions
+
+                        </h3>
+
+
+                        <p>
+
+                            Young supporters discuss skills,
+                            entrepreneurship and opportunities
+                            for the future.
+
+                        </p>
+
+
+                        <div class="news-card-footer">
+
+                            <span class="news-date">
+
+                                July 2026
+
+                            </span>
+
+
+                            <a
+                                href="#"
+                                class="news-read"
+                            >
+
+                                Read More →
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- NEWS 3 -->
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <span>03</span>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-card-category">
+
+                            Campaign
+
+                        </div>
+
+
+                        <h3>
+
+                            Volunteers Continue Building
+                            Support Network
+
+                        </h3>
+
+
+                        <p>
+
+                            Campaign volunteers continue
+                            community engagement activities
+                            across different areas.
+
+                        </p>
+
+
+                        <div class="news-card-footer">
+
+                            <span class="news-date">
+
+                                July 2026
+
+                            </span>
+
+
+                            <a
+                                href="#"
+                                class="news-read"
+                            >
+
+                                Read More →
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- NEWS 4 -->
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <span>04</span>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-card-category">
+
+                            Development
+
+                        </div>
+
+
+                        <h3>
+
+                            Focus on Agriculture and
+                            Rural Development
+
+                        </h3>
+
+
+                        <p>
+
+                            Stakeholders discuss opportunities
+                            for agricultural development and
+                            support for farmers.
+
+                        </p>
+
+
+                        <div class="news-card-footer">
+
+                            <span class="news-date">
+
+                                June 2026
+
+                            </span>
+
+
+                            <a
+                                href="#"
+                                class="news-read"
+                            >
+
+                                Read More →
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- NEWS 5 -->
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <span>05</span>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-card-category">
+
+                            Supporters
+
+                        </div>
+
+
+                        <h3>
+
+                            Supporters Reaffirm Commitment
+                            to the Campaign Movement
+
+                        </h3>
+
+
+                        <p>
+
+                            Campaign supporters gather to
+                            discuss participation and future
+                            campaign activities.
+
+                        </p>
+
+
+                        <div class="news-card-footer">
+
+                            <span class="news-date">
+
+                                June 2026
+
+                            </span>
+
+
+                            <a
+                                href="#"
+                                class="news-read"
+                            >
+
+                                Read More →
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- NEWS 6 -->
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <span>06</span>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-card-category">
+
+                            Announcement
+
+                        </div>
+
+
+                        <h3>
+
+                            Campaign Announces New
+                            Community Engagement Plans
+
+                        </h3>
+
+
+                        <p>
+
+                            New programmes will support
+                            communication and engagement
+                            with communities.
+
+                        </p>
+
+
+                        <div class="news-card-footer">
+
+                            <span class="news-date">
+
+                                May 2026
+
+                            </span>
+
+
+                            <a
+                                href="#"
+                                class="news-read"
+                            >
+
+                                Read More →
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- NEWSLETTER -->
+
+        <section class="news-newsletter">
+
+
+            <div>
+
+
+                <h2>
+
+                    Stay Updated
+
+                </h2>
+
+
+                <p>
+
+                    Subscribe to receive campaign news,
+                    announcements and important updates.
+
+                </p>
+
+
+            </div>
+
+
+
+            <form class="news-form">
+
+
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+
+                <button type="submit">
+
+                    Subscribe
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="news-footer">
+
+
+        <p>
+
+            © 2026
+            <strong>Yakubu Campaign</strong>.
+            All Rights Reserved.
+
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
